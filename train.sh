@@ -1,0 +1,11 @@
+python tools/train.py \
+    --conf configs/yolov6l6_finetune.py \
+    --data dlenigma1/BadODD/dataset.yaml \
+    --batch 4 \
+    --img-size 1280 \
+    --stop_aug_last_n_epoch 3 \
+    --bs_per_gpu 16 \
+    --epochs 20 \
+    --eval-interval 1 \
+    --device 0 \
+    --output-dir model_weight
